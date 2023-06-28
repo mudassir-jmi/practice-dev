@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<title>Create Circle On Click Div</title>
+<head>
+</head>
+
+<style>
+    .circle {
+      width: 200px;
+      height: 200px;
+      background-color: red;
+      border-radius: 50%;
+    }
+
+  #myDiv {
+      width: 200px;
+      height: 200px;
+      background-color: #414141;
+      cursor: pointer;
+  }
+</style>
+
+<body>
+<h1>Create Circle On Click div</h1>
+<div id="myDiv"></div>
+
+<script>
+    const myDiv = document.getElementById("myDiv");
+
+    myDiv.addEventListener("click", function() {
+      const circle = document.createElement("div");
+      circle.classList.add("circle");
+      myDiv.appendChild(circle);
+      // replace div when circle appear
+       myDiv.parentNode.replaceChild(circle, myDiv);
+       
+    });
+
+</script>
+</body>
+</html>
