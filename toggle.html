@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <title>Toggle | Click on div appear circle & Click circle appear div</title>
+<head>
+  <style>
+  
+   .div {
+      width: 200px;
+      height: 200px;
+      background-color: red;
+      cursor:pointer;
+      margin: 0 auto;
+    }
+    
+    .circle {
+      width: 200px;
+      height: 200px;
+      background-color: blue;
+      border-radius: 50%;
+      cursor:pointer;
+      margin: 0 auto;
+    }
+   
+  </style>
+  
+</head>
+<body>
+  <div id="shape" class="div" onclick="changeShape()" </div>
+
+  <script>
+    function changeShape() {
+      let shape = document.getElementById("shape");
+
+      if (shape.classList.contains("div")) {
+        shape.classList.remove("div");
+        shape.classList.add("circle");
+      } else {
+        shape.classList.remove("circle");
+        shape.classList.add("div");
+      }
+    }
+    
+    //document.querySelector("#shape").addEventListener("click", changeShape);
+  </script>
+</body>
+</html>
